@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap&subset=latin-ext');
+$f-roboto: 'Roboto',
+sans-serif;
+$f-primary: $f-roboto;
+//
+$duration: .4s;
+//
+$f-size: 16px; // set as a base value
+$base-size: 1rem;
+// font-sizes
+$f-size-xs: $base-size * .625; // 10px
+$f-size-sm: $base-size * .875; // 14px
+$f-size-md: $base-size * 1; // 16px
+$f-size-lg: $base-size * 1.125; // 18px
+$f-size-xl: $base-size * 1.375; // 22px
+//colors
+$vue-blue: #32485F;
+$vue-green: #00C185;
+$c-gray-d: #292929;
+$c-gray-l: #DEE3EA;
+$c-red: #FF6780;
+$c-gray: #8B8B8B;
+$c-blue-l:#F5F7F8;
+$c-white: #fff;
+//
+$c-text-d: $c-gray-d;
+$c-text-l: $c-gray;
+$c-border-l: $c-gray-l;
+$c-danger: $c-red;

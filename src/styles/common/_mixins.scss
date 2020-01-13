@@ -1,0 +1,27 @@
+@mixin b-round($r: 4px) {
+    border-radius: $r;
+}
+
+@mixin border($w: 1px, $border-color: $c-border-l) {
+    border: $w solid $border-color;
+}
+
+@mixin border-for($direction, $w: 1px, $border-color: $c-border-l) {
+    border-#{$direction}: $w solid $border-color;
+}
+
+@mixin border-element {
+    height: 2.5rem;
+    line-height: 2.25rem;
+    border: 2px solid $c-border-l;
+    @include b-round();
+}
+
+@mixin input-style {
+    @include border-element;
+    width: 100%;
+    padding: 0 9px;
+    background-color: $c-white;
+    font-size: $f-size-md;
+    color: $c-text-d;
+}

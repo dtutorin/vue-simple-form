@@ -1,0 +1,98 @@
+@import './common/index.scss';
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: $f-primary;
+    font-size: $f-size-md;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+textarea {
+    border: none;
+    resize: none;
+    vertical-align: top;
+}
+
+input,
+button,
+select,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+#app {
+    max-width: 1380px;
+    width: 100vw;
+    margin: 0 auto;
+    color: $c-text-d;
+}
+
+h2 {
+    font-size: $f-size-lg;
+    color: $c-text-d;
+}
+
+p {
+    color: $c-gray;
+    font-size: $f-size-sm;
+}
+
+.error-note {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.25rem;
+    padding: 0 9px;
+    background-color: $c-blue-l;
+    font-size: $f-size-md;
+    color: $c-danger;
+    @include b-round();
+    @include border(1px, $c-blue-l);
+}
+
+// animations
+//fade
+.fade {
+    &-enter-active,
+    &-leave-active {
+        transition: opacity .5s;
+    }
+    &-enter,
+    &-leave-to {
+        opacity: 0;
+    }
+}
+
+//bounce
+.bounce {
+    &-enter-active {
+        animation: bounce-in .5s;
+    }
+    &-leave-active {
+        animation: bounce-in .5s reverse;
+    }
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
